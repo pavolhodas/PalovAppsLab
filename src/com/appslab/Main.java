@@ -3,11 +3,11 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
-        int first = 2;
-        int second = 3;
-        int third = 4;
+        int first = 11;
+        int second = 5;
+        int third = 3;
 
-        if(first + second > third && third + second > first && first + third > second)
+        if(third * second < first)
         {
             System.out.println("true");
         }
