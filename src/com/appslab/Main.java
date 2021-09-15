@@ -1,31 +1,19 @@
 package com.appslab;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        whoWins("rock", "paper");
-        whoWins("paper", "paper");
+        int a[]={5,32,-12,4,-50,35};
+        int b[]={15,9,45,-8,4,5,2};
+
+        System.out.println("Difference is " + differenceMaxMin( a,6));
+        System.out.println("Difference is " + differenceMaxMin(b,7));
     }
 
-    private static void whoWins(String str01, String str02) {
-
-        if (str01.equals(str02)) {
-            System.out.println("TIE");
-        } else if (str01.equals("paper") && str02.equals("rock")) {
-            System.out.println("Player 1 wins!!!");
-        } else if (str01.equals("rock") && str02.equals("paper")) {
-            System.out.println("Player 2 wins!!!");
-        } else if(str01.equals("scissors") && str02.equals("rock")) {
-            System.out.println("Player 2 wins!!!");
-        }else if(str01.equals("scissors") && str02.equals("paper")) {
-            System.out.println("Player 1 wins!!!");
-        }else if(str01.equals("rock") && str02.equals("scissors")) {
-            System.out.println("Player 1 wins!!!");
-        }else if(str01.equals("paper") && str02.equals("scissors")) {
-            System.out.println("Player 2 wins!!!");
-        }
+    private static int differenceMaxMin(int[] a, int total) {
+        Arrays.sort(a);
+        return a[total-1]-a[0];
     }
 }
