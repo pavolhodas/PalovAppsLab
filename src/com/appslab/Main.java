@@ -6,37 +6,29 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-
-
         int a[]={1,2,8,65,9,4};
         warOfNumbers(a);
-
     }
-    private static void warOfNumbers(int[] a) {
-        ArrayList<Integer> ar01 = new ArrayList<Integer>();
-        ArrayList<Integer> ar02 = new ArrayList<Integer>();
 
-        System.out.println("Odd Numbers");
+    private static void warOfNumbers(int[] a) {
+        int sum01 = 0;
+        int sum02 = 0;
 
         for(int i=0;i<a.length;i++){
             if(a[i]%2!=0){
-                ar01.add(a[i]);
+                sum01 = sum01+a[i];
+            }
+            else{
+                sum02 = sum02+a[i];
             }
         }
-        System.out.println("Even numbers");
-        for(int i=0;i<a.length;i++)
+        if(sum01>sum02)
         {
-            if(a[i]%2==0)
-            {
-                ar02.add(a[i]);
-            }
+            System.out.println(sum01);
         }
-        for(int i=0;i<ar01.size();i++ )
-        {
-
+        else{
+            System.out.println(sum02);
         }
-        System.out.println(ar01);
-        System.out.println(ar02);
     }
 }
 
