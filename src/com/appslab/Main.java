@@ -6,28 +6,17 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        int a[]={1,2,8,65,9,4};
-        warOfNumbers(a);
+        String a[]={"abc", "cba"};
+         System.out.println(endWith(a));
     }
 
-    private static void warOfNumbers(int[] a) {
-        int sum01 = 0;
-        int sum02 = 0;
-
-        for(int i=0;i<a.length;i++){
-            if(a[i]%2!=0){
-                sum01 = sum01+a[i];
-            }
-            else{
-                sum02 = sum02+a[i];
-            }
-        }
-        if(sum01>sum02)
+    private static boolean endWith(String[] a) {
+        if(a[0].endsWith(a[1]))
         {
-            System.out.println(sum01);
+            return true;
         }
         else{
-            System.out.println(sum02);
+            return false;
         }
     }
 }
