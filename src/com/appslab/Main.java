@@ -1,23 +1,18 @@
 package com.appslab;
 
-import java.util.*;
 
-public class Main {
-    public static void main(String[] args) {
-        String newLine = System.getProperty("line.separator");
+    public class Main {
 
-        System.out.print(canCapture("A8", "F8") + newLine);
-        System.out.print(canCapture("A8", "A7") + newLine);
-        System.out.print(canCapture("B8", "A7") + newLine);
-    }
-
-
-    static boolean canCapture(String s1, String s2) {
-
-      if(s1.charAt(0) == s2.charAt(0) || s1.charAt(1) == s2.charAt(1))
-        {
-            return true;
+        public static void main(String[] args) {
+            String a[]={"abc", "cba"};
+            System.out.println(endWith(a));
         }
-        return false;
-    }
+
+        private static boolean endWith(String[] a) {
+            if(a[0].endsWith(a[1]))
+            {
+                return true;
+            }
+                return false;
+        }
 }
