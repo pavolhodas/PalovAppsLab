@@ -1,16 +1,25 @@
 package com.appslab;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.stream.Stream;
 
 public class Main {
 
     public static void main(String[] args) {
-         String name = "John";
-         int studentNumber = 12345;
+        String fileName = "c://Users//z19ista08//IdeaProjects//input.txt";
 
-        Student student =  new Student();
-        System.out.println(Student.getName(name) + ": " + Student.getStudentNumber(studentNumber));
+        //read file into stream, try-with-resources
+        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+
+            stream.forEach(System.out::println);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
